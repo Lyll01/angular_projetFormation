@@ -1,0 +1,25 @@
+<!-- <form (ngSubmit)="onSubmit(loginForm)">
+  <input type="text" name="username" ngModel required>
+  <input type="email" nema="mail" ngModel required>
+  <input type="password" name="password" ngModel required>
+  <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form> -->
+
+<form #signupForm="ngForm" (submit)="onSubmit()">
+  <label>Nom d'utilisateur:</label>
+  <input type="text" name="username" [(ngModel)]="username" required minlength="4" appAutofocus="true"><br>
+  <div *ngIf="signupForm.controls['username']?.invalid && signupForm.controls.username?.dirty">
+    Veuillez entrez un nom d'utilisateur valide
+  </div>
+  <label>Email:</label>
+  <input type="email" name="mail" [(ngModel)]="mail" required email><br>
+  <div *ngIf="signupForm.controls['mail']?.invalid && signupForm.controls.mail?.dirty">
+    Veuillez entrez un mail valide
+  </div>
+  <label>Mot de passe:</label>
+  <input type="password" name="pass" [(ngModel)]="pass" required minlength="6"><br>
+  <div *ngIf="signupForm.controls['pass']?.invalid && signupForm.controls.pass?.dirty">
+    Veuillez entrez un mdp valide
+  </div>
+  <button type="submit" [disabled]="!signupForm.valid" >Envoyer</button>
+</form>

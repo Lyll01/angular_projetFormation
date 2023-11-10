@@ -1,0 +1,40 @@
+#head {
+  display: flex;
+  justify-content: space-between;
+  border: solid;
+}
+
+#links {
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  margin-left: 40px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+#titre {
+  font-size: 1.7em;
+}
+
+img {
+  width: 8%;
+}
+
+#user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 300px;
+  margin-right: 10px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
