@@ -1,4 +1,4 @@
-import 'zone.js/dist/zone';
+import 'zone.js';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';

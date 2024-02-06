@@ -11,12 +11,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "configurations": {
             "development": {
-              "buildOptimizer": false,
-              "extractLicenses": false,
-              "namedChunks": true,
-              "optimization": false,
-              "sourceMap": true,
-              "vendorChunk": true
             },
             "production": {
               "aot": true,
@@ -42,8 +36,16 @@
             "outputPath": "dist/demo",
             "scripts": [],
             "styles": ["src/global_styles.css"],
-            "tsConfig": "src/tsconfig.app.json"
-          }
+            "tsConfig": "src/tsconfig.app.json",
+            "aot": false,
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "defaultConfiguration": ""
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
